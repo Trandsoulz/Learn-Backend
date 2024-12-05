@@ -38,7 +38,7 @@ cronJob2.start();
 app.get("/", (_, res) => {
   res.render("index", {
     status: "success",
-    message: "Welcome to the project server",
+    message: "Welcome to the random project server",
   });
 
   // res.send({ status: "success", message: "Welcome to the Auth server" });
