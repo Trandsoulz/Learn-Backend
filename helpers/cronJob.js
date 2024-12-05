@@ -7,9 +7,9 @@ const cronJob = new CronJob(
   "00 00 0,6,14,17 * * 0-6",
   async function () {
     await sendMail(
-      ["bethrand2019@gmail.com", "bethrand2020@gmail.com"],
-      "You will win, you will win, you will win",
-      "<h1> I Nnaemeka, Bethrand, will win in life </h1>"
+      ["bethrand2019@gmail.com", "igboprecious2@gmail.com"],
+      "You will win",
+      "<h1> You are the best </h1> <h1> You are more than enough </h1> <h1> You will win in life </h1> <h1> You will be the best in all your endeavours </h1> <h1>Always remember</h1>"
     );
     console.log("Email sent");
   },
