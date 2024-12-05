@@ -36,7 +36,7 @@ cronJob2.start();
 // console.log(cronJob.nextDates(6));
 
 app.get("/", (_, res) => {
-  res.render("index", {
+  res.status(200).send({
     status: "success",
     message: "Welcome to the random project server",
   });
