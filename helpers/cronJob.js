@@ -22,9 +22,23 @@ const cronJob2 = new CronJob(
   // "00 00 0,6,14,17 * * 0-6",
   "00 */1 * * * *",
   async function () {
-    const url = "https://backend-to-do-3an4.onrender.com/";
-    const res = await got(url);
-    console.log("Cron Job is running ", res.body);
+    const urls = [
+      "https://backend-to-do-3an4.onrender.com/",
+      "https://raha-voucha-api.onrender.com/",
+    ];
+
+    try {
+      const res = await Promise.all(
+        urls.map((url) => {
+          return got(url);
+        })
+      );
+      res.forEach((res, index) => {
+        console.log(`Responses from ${urls[index]} : `, res.body);
+      });
+    } catch (error) {
+      console.error("Error fetching URLs : ", error);
+    }
   },
   null,
   true,
