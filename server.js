@@ -10,7 +10,7 @@ import authRoute from "./src/controllers/authController.js";
 import globalErrorHandler from "./src/controllers/errorController.js";
 import createError from "http-errors";
 import userRoute from "./src/controllers/userController.js";
-import { cronJob, cronJob2 } from "./helpers/cronJob.js";
+import { cronJob, cronJob2, cronJob3 } from "./helpers/cronJob.js";
 
 const { PORT, NODE_ENV } = process.env;
 
@@ -33,6 +33,7 @@ if (NODE_ENV !== "prod") {
 
 cronJob.start();
 cronJob2.start();
+cronJob3.start();
 // console.log(cronJob.nextDates(6));
 
 app.get("/", (_, res) => {

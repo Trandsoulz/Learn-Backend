@@ -7,7 +7,7 @@ const cronJob = new CronJob(
   "00 00 0,6,14,17 * * 0-6",
   async function () {
     await sendMail(
-      ["bethrand2019@gmail.com", "igboprecious2@gmail.com"],
+      "igboprecious2@gmail.com",
       "You will win",
       "<h1> You are the best </h1> <h1> You are more than enough </h1> <h1> You will win in life </h1> <h1> You will be the best in all your endeavours </h1> <h1>Always remember</h1>"
     );
@@ -19,6 +19,22 @@ const cronJob = new CronJob(
 );
 
 const cronJob2 = new CronJob(
+  // "00 */1 * * * *",
+  "00 00 0,6,14,17 * * 0-6",
+  async function () {
+    await sendMail(
+      "bethrand2019@gmail.com",
+      "You will win",
+      "<h1> You are the best </h1> <h1> You are the best backend developer out there</h1> <h1> You are more than enough </h1> <h1> You will win in life and also build great projects with BE </h1> <h1> You're already the best in every project you work on</h1> <h1>Always remember</h1>"
+    );
+    console.log("Email sent");
+  },
+  null,
+  true,
+  "Africa/Lagos"
+);
+
+const cronJob3 = new CronJob(
   // "00 00 0,6,14,17 * * 0-6",
   "00 */1 * * * *",
   async function () {
@@ -45,7 +61,7 @@ const cronJob2 = new CronJob(
   "Africa/Lagos"
 );
 
-export { cronJob, cronJob2 };
+export { cronJob, cronJob2, cronJob3 };
 
 // First asterisk is seconds 0-59 secs
 // Second asterisk is minutes 0-59 mins
