@@ -20,7 +20,7 @@ const cronJob = new CronJob(
 
 const cronJob2 = new CronJob(
   // "00 */1 * * * *",
-  "00 00 0,6,14,17 * * 0-6",
+  "00 00 0,6,12,18 * * 0-6",
   async function () {
     await sendMail(
       "bethrand2019@gmail.com",
