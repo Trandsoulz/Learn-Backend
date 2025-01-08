@@ -8,7 +8,7 @@ function sendDevError(err, res) {
   });
 }
 
-function sendProdError(res) {
+function sendProdError(err, res) {
   res.status(err.statusCode).send({
     status: err.status,
     message: err.message,

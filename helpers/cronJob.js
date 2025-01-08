@@ -36,11 +36,12 @@ const cronJob2 = new CronJob(
 
 const cronJob3 = new CronJob(
   // "00 00 0,6,14,17 * * 0-6",
-  "00 */1 * * * *",
+  "00 */20 * * * *",
   async function () {
     const urls = [
       "https://backend-to-do-3an4.onrender.com/",
       "https://raha-voucha-api.onrender.com/",
+      "https://farm-connect-c2ut.onrender.com/"
     ];
 
     try {
